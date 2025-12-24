@@ -1,0 +1,14 @@
+@use "../../scss/variables" as *;
+
+.cta {
+  padding: 60px 0;
+  background: linear-gradient(120deg, #2a3622, #4a5a31);
+  color: $cream;
+}
+
+.cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}

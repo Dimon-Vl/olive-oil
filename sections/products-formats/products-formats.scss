@@ -1,0 +1,15 @@
+@use "../../scss/variables" as *;
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.tags span {
+  background: rgba(42, 54, 34, 0.12);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+}

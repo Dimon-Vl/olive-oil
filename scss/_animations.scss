@@ -1,0 +1,37 @@
+@use "variables" as *;
+
+.reveal {
+  opacity: 0;
+  transform: translateX(-80px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  will-change: transform, opacity;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.stagger > * {
+  --reveal-delay: 0s;
+  transition-delay: var(--reveal-delay);
+}
+
+.stagger > *:nth-child(1) { --reveal-delay: 0.08s; }
+.stagger > *:nth-child(2) { --reveal-delay: 0.16s; }
+.stagger > *:nth-child(3) { --reveal-delay: 0.24s; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .hero-media img {
+    animation: none;
+    transition: none;
+    transform: none;
+    opacity: 1;
+  }
+}
