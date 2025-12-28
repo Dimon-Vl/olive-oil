@@ -6,21 +6,35 @@ export function initNav() {
     return;
   }
 
+  const updateToggleState = (isOpen) => {
+    navToggle.setAttribute('aria-expanded', String(isOpen));
+  };
+
   navToggle.addEventListener('click', () => {
-    document.body.classList.toggle('nav-open');
+    const isOpen = document.body.classList.toggle('nav-open');
+    updateToggleState(isOpen);
   });
 
-  nav.querySelectorAll('a').forEach((link) => {
+  const navLinks = Array.from(nav.querySelectorAll('a'));
+
+  navLinks.forEach((link) => {
     link.addEventListener('click', () => {
       document.body.classList.remove('nav-open');
+      updateToggleState(false);
     });
   });
 
-  const current = window.location.pathname.split('/').pop() || 'index.html';
-  nav.querySelectorAll('.nav-link').forEach((link) => {
-    const href = link.getAttribute('href');
-    if (href === current) {
-      link.classList.add('is-active');
-    }
+  const setActiveLink = (hash) => {
+    const targetHash = (hash || '#home').toLowerCase();
+    navLinks.forEach((link) => {
+      const linkHash = link.hash.toLowerCase();
+      link.classList.toggle('is-active', linkHash === targetHash);
+    });
+  };
+
+  setActiveLink(window.location.hash);
+
+  window.addEventListener('hashchange', () => {
+    setActiveLink(window.location.hash);
   });
 }

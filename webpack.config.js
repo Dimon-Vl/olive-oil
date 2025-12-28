@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const fs = require('fs');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-const pages = ['index', 'about', 'products', 'contacts'];
+const pages = ['index'];
 
 module.exports = (env, argv) => {
   const isProd = argv.mode === 'production';

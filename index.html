@@ -11,15 +11,25 @@
   <!-- CSS is injected by webpack -->
 </head>
 <body>
-  <div class="page">
+  <div class="page" id="top">
     <%= header %>
 
     <main>
       <%= section('index-hero') %>
       <%= section('index-features') %>
       <%= section('index-approach') %>
-      <!-- <%= section('index-collection') %> -->
+      <%= section('index-collection') %>
       <%= section('index-cta') %>
+      <%= section('about-hero') %>
+      <%= section('about-philosophy') %>
+      <%= section('about-timeline') %>
+      <%= section('about-values') %>
+      <%= section('products-hero') %>
+      <%= section('products-list') %>
+      <%= section('products-formats') %>
+      <%= section('contacts-hero') %>
+      <%= section('contacts-info') %>
+      <%= section('contacts-visit') %>
     </main>
 
     <%= footer %>

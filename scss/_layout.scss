@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 .page {
   min-height: 100vh;
   display: flex;
@@ -7,4 +9,29 @@
 .container {
   width: min(1120px, 92vw);
   margin: 0 auto;
+}
+
+.to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  background: $olive-950;
+  color: $cream;
+  display: grid;
+  place-items: center;
+  font-size: 1.1rem;
+  box-shadow: 0 12px 24px rgba(31, 42, 26, 0.2);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.to-top.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
 }
