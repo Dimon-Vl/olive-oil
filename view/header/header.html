@@ -1,23 +1,27 @@
 <header class="site-header">
   <div class="container header-inner">
     <a class="logo" href="#home">Olio Del Nonno</a>
-    <nav class="nav" data-nav id="site-nav">
-      <a href="#home" class="nav-link" data-i18n="nav.home">Home</a>
-      <a href="#about" class="nav-link" data-i18n="nav.about">About</a>
-      <a href="#products" class="nav-link" data-i18n="nav.products">Products</a>
-      <a href="#contacts" class="nav-link" data-i18n="nav.contacts">Contacts</a>
-      <div class="lang-switch">
-        <select class="lang-select" data-lang-select data-i18n-attr="aria-label:lang.label" aria-label="Language">
-          <option value="en">EN</option>
-          <option value="it">IT</option>
-          <option value="de">DE</option>
-        </select>
+    <div class="header-right">
+      <nav class="nav" data-nav id="site-nav">
+        <a href="#home" class="nav-link" data-i18n="nav.home">Home</a>
+        <a href="#about" class="nav-link" data-i18n="nav.about">About</a>
+        <a href="#products" class="nav-link" data-i18n="nav.products">Products</a>
+        <a href="#contacts" class="nav-link" data-i18n="nav.contacts">Contacts</a>
+      </nav>
+      <div class="header-controls">
+        <div class="lang-switch">
+          <select class="lang-select" data-lang-select data-i18n-attr="aria-label:lang.label" aria-label="Language">
+            <option value="en">EN</option>
+            <option value="it">IT</option>
+            <option value="de">DE</option>
+          </select>
+        </div>
+        <button class="nav-toggle" data-nav-toggle data-i18n-attr="aria-label:nav.toggle" aria-label="Open menu" aria-controls="site-nav" aria-expanded="false">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
       </div>
-    </nav>
-    <button class="nav-toggle" data-nav-toggle data-i18n-attr="aria-label:nav.toggle" aria-label="Open menu" aria-controls="site-nav" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </button>
+    </div>
   </div>
 </header>

@@ -49,7 +49,6 @@ const storeLang = (lang) => {
       })
     );
   } catch (error) {
-    // Ignore storage errors (privacy mode, blocked storage).
   }
 };
 

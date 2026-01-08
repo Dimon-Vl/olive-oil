@@ -12,9 +12,16 @@
 .header-inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: 20px 0;
   gap: 16px;
+}
+
+.header-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 24px;
 }
 
 .logo {
@@ -56,6 +63,12 @@
 .nav-link:hover::after,
 .nav-link.is-active::after {
   width: 100%;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .lang-switch {
